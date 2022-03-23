@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form-Ragestration</title>
+    <link rel="stylesheet" href="index.css" />
+    <!-- <link rel="stylesheet" href="../fontawesome-free-5.15.4-web/css/all.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="../form-valdation/fontawesome-free-5.15.4-web/css/all.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+  <body>
+    <div class="contaner">
+      <h1>Ragestration <span>Form</span></h1>
+      <form action="" class="form">
+        <div class="input">
+          <label for="">Name:</label>
+
+          <input type="text" name="" id="" />
+        </div>
+
+        <div class="input">
+          <label for="">Tell:</label>
+          <input type="text" name="" id="" />
+        </div>
+
+        <div class="input">
+          <label for="">password:</label>
+          <input type="password" name="" id="passwordinput" />
+      
+          <span id="passwordbtn">
+            <i class="fa fa-eye" id="eyeon"></i>
+          </span>
+
+          <span id="passwordbtn1" class="passwordbtn"></
+            <i class="fa-solid fa-eye-slash" id="eyeoff"></i>
+          </span>
+        </div>
+        <div class="input">
+          <label for="">Date:</label>
+          <input type="date" name="" id="" />
+        </div>
+        <div class="input">
+          <button type="submit" class="btn">Save</button>
+        </div>
+      </form>
+    </div>
+    <!-- end of contaner -->
+
+    <script>
+      let passwordbtn = document.getElementById('passwordbtn')
+      let inputpassword = document.getElementById('passwordinput')
+      let img = document.getElementById('eyeon')
+      passwordbtn.addEventListener('click', function () {
+        if (inputpassword.type == 'password') {
+          inputpassword.type = 'text'
+          img.classList.add('fa-eye-slash')
+          img.classList.remove('fa-eye')
+        } else {
+          inputpassword.type = 'password'
+          img.classList.remove('fa-eye-slash')
+          img.classList.add('fa-eye')
+        }
+      })
+    </script>
+  </body>
+</html>
